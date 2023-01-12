@@ -5,7 +5,7 @@ services:
     build:
       context: .
       args:
-        IMAGE: ubuntu:22.04
+        IMAGE: ubuntu:16.04
         USER: pallettown
         TIMEOUT: 60
         EXEC: pallettown
