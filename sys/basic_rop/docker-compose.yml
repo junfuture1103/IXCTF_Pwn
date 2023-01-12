@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  system-basic_rop:
+    build:
+      context: .
+      args:
+        IMAGE: ubuntu:18.04
+        USER: basic_rop
+        TIMEOUT: 60
+        EXEC: basic_rop
+        SERVICE: basic_rop
+        APT_OLD: 0
+    ports:
+      - "10030:10030"
+    restart: always

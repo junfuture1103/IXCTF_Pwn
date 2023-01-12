@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  system-pallettown:
+    build:
+      context: .
+      args:
+        IMAGE: ubuntu:22.04
+        USER: pallettown
+        TIMEOUT: 60
+        EXEC: pallettown
+        SERVICE: pallettown
+        APT_OLD: 0
+    ports:
+      - "10040:10040"
+    restart: always

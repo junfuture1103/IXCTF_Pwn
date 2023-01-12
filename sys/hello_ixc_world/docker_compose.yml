@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  system-hello_ixc_world:
+    build:
+      context: .
+      args:
+        IMAGE: ubuntu:16.04
+        USER: hello_ixc_world
+        TIMEOUT: 60
+        EXEC: hello_ixc_world
+        SERVICE: hello_ixc_world
+        APT_OLD: 0
+    ports:
+      - "10001:10001"
+    restart: always

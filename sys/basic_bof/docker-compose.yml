@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  system-basic_bof:
+    build:
+      context: .
+      args:
+        IMAGE: ubuntu:18.04
+        USER: basic_bof
+        TIMEOUT: 60
+        EXEC: basic_bof
+        SERVICE: basic_bof
+        APT_OLD: 0
+    ports:
+      - "10010:10010"
+    restart: always

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  system-wallet:
+    build:
+      context: .
+      args:
+        IMAGE: ubuntu:20.04
+        USER: wallet
+        TIMEOUT: 60
+        EXEC: wallet
+        SERVICE: wallet
+        APT_OLD: 0
+    ports:
+      - "10070:10070"
+    restart: always
