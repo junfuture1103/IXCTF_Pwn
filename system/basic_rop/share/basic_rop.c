@@ -22,11 +22,15 @@ void init()
 int main(int argc, char *argv[])
 {
     init();
+    
     printf("Attack Me :");
-    char buf[0x30] = {};
+    char buf[0x30];
 
     read(0, buf, 0x100);
-    write(1, buf, sizeof(buf));
+    write(1, buf, 0x100);
 
+    printf("Again :");
+    read(0, buf, 0x100);
     return 0;
 }
+

@@ -2,7 +2,8 @@ from pwn import *
 
 context.log_level = 'debug'
 
-p = remote("pwn.isangxcaution.xyz", 10030)
+#p = remote("pwn.isangxcaution.xyz", 10030)
+p = process("./basic_rop")
 e = ELF("./basic_rop")
 libc = ELF("./libc-2.31.so")
 
